@@ -80,7 +80,6 @@ btnCalculate.addEventListener (`click`, ()=> {
         creditPrincipalDebt.innerHTML = Math.floor(bb).toLocaleString('ru-RU');
         creditRemainingDebt.innerHTML = Math.floor(aa).toLocaleString('ru-RU');
     }
-
 });
 
 
