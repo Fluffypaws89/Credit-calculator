@@ -1,0 +1,64 @@
+.credit__form-wrap {
+    display: none;
+}
+
+.credit__form-title {
+    background: rgba(251, 251, 251, .7);
+    width: 400px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px;
+    font-size: 40px;
+    margin-top: 40px;
+}
+#credit__form-title-margin0 {
+    margin-top: 0;
+}
+
+.credit__form-table {
+width: 85%;
+background: #fbfbfb;
+margin: 0 auto;
+}
+
+.credit__table-tr {
+    border: solid 1px #ccc;
+    width: 600px;
+}
+
+.td_name {
+   width: 200px;
+   background: #fbfbfb;
+   border-right: solid 1px #ccc;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.td_value {
+    text-align: center;
+    /* padding-right: 15%; */
+}
+
+.credit__form-table-big {
+    background: #fbfbfb;
+    border: solid 1px #ccc;
+    font-size: 18px;
+
+}
+
+.credit__form-head {
+    border: solid 1px #ccc;
+    text-align: center;
+}
+
+#form__table td{
+    text-align: center;
+    border: solid 1px #ccc;
+}
+
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./creditcalc.css">
+    <link rel="stylesheet" href="./creditform.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="popup__div">
+        <div class="popup__close"></div>
+        <div class="popup__wrap">`Вы кликнули на`</div>
+    </div>
+
+    <div id="result"></div>
+    <section>
+        <div id="form_otput" id="formOutput" class="form__div">
+            <div class="otp-itm" id="otp_name"></div>
+            <div class="otp-itm" id="otp_mail"></div>
+            <div class="otp-itm" id="otp_number"></div>
+            <div class="otp-itm" id="otp_phone"></div>
+        </div>
+    </section>
+    <div class="credit__calc">
+        <div class="credit__calc-wrap">
+            <div class="credit__section">
+                <div class="credit__item">
+                    <div class="credit__name">Сумма кредита</div>
+                    <div class="credit__value" id="credit__sum"></div>
+                </div>
+                <div class="credit__line-wrap">
+                    <input type="range" min="100000" max="3000000" class="credit__range" id="credit__sum-range"
+                        value="300000" step="100000">
+
+                    <div class="credit__line-border">
+
+                    </div>
+                    <div class="credit__point">
+                        <div class="credit__point-dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="credit__section">
+                <div class="credit__line-wrap">
+                    <input type="range" min="3" max="36" class="credit__range" id="credit__time-range" value="6"
+                        step="1">
+                </div>
+                <div class="credit__item">
+                    <div class="credit__name">Время</div>
+                    <div class="credit__value" id="credit__time"></div>
+                </div>
+            </div>
+        </div>
+        <div class="credit__percent">
+            <div class="credit__item-percent">
+                <div class="credit__name" id="credit__send">РАССЧИТАТЬ</div>
+                <div class="credit__name" id="credit__percent">Ставка</div>
+                <div class="credit__value" id="credit__value1">10%</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="credit__form-wrap">
+        <div class="credit__form-field">
+            <section class="credit__form-info">
+                <div class="credit__form-title" id="credit__form-title-margin0">Ваш кредит</div>
+                <table class="credit__form-table">
+                    <tbody>
+                        <tr class="credit__table-tr">
+                            <td class="credit__table-name, td_name">Сумма кредита</td>
+                            <td id="form__credit-sum" class="credit__table-name, td_value">110000 р.</td>
+                        </tr>
+                        <tr class="credit__table-tr">
+                            <td class="credit__table-name, td_name">Ставка</td>
+                            <td id="form__rate-value" class="credit__table-name, td_value">10%</td>
+                        </tr>
+                        <tr class="credit__table-tr">
+                            <td class="credit__table-name, td_name">Месяцев</td>
+                            <td id="form__percent-value" class="credit__table-name, td_value">18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="credit__form-calc">
+                <div class="credit__form-title">Расчет кредита</div>
+                <table class="credit__form-table">
+                    <tbody>
+                        <tr class="credit__table-tr">
+                            <td class="credit__table-name, td_name">Платеж</td>
+                            <td id="form__credit-payment" class="credit__table-name, td_value">2500/мес.</td>
+                        </tr>
+                        <tr class="credit__table-tr">
+                            <td class="credit__table-name, td_name">Проценты</td>
+                            <td id="form__over-percent" class="credit__table-name, td_value">4800 р.</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </section>
+            <section class="credit__form-graph">
+                <div class="credit__form-title">График платежей</div>
+
+                <div class="credit__form-table-big">
+                    <table id="form__table">
+                        <tbody>
+                            <tr>
+                                <td style="width: 10%;" class="credit__form-head">Месяц</td>
+                                <td class="credit__form-head">Ежемесячный платеж с процентами, руб.</td>
+                                <td class="credit__form-head">Проценты, руб.</td>
+                                <td style="width: 17%" class="credit__form-head">Основной долг, руб.</td>
+                                <td style="width: 17%" class="credit__form-head">Остаток долга, руб.</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <div class="calc">
+        <h2>Калькулятор</h2>
+        <div class="values">
+            <div class="val1">Число 1<input class="calc__val" type="text" id="val_1"></div>
+            <div class="val1">Число 2<input class="calc__val" type="text" id="val_2"></div>
+            <div class="calc__result-name">Результат
+                <div class="calc__val-result" id="calc__result">Результат</div>
+            </div>
+        </div>
+        <div class="calc__action-wrap">
+            <div class="calc__action">
+                <div id="calcResult-sum" class="calc__result-sum">Сумма</div>
+                <button class="button__click" onclick="fnSum()">+</button>
+            </div>
+
+            <div class="calc__action">
+                <div id="calcResult-subtr" class="calc__result-subtr">Разность</div>
+                <button class="button__click" onclick="fnSubtr()">-</button>
+            </div>
+
+            <div class="calc__action">
+                <div id="calcResult-multi" class="calc__result-multi">Умножение</div>
+                <button class="button__click" onclick="fnMulti()">x</button>
+            </div>
+
+            <div class="calc__action">
+                <div id="calcResult-div" class="calc__result-div">Деление</div>
+                <button class="button__click" onclick="fnDiv()">/</button>
+            </div>
+
+        </div>
+        <h2>Дополнительные действия</h2>
+        <div class="calc__action-wrap">
+            <div class="calc__action">
+                <div class="val1">+ n<input class="calc__val" type="text" id="val__plus-n"></div>
+            </div>
+            <div class="calc__action">
+                <div class="val1">- n<input class="calc__val" type="text" id="val__minus-n"></div>
+            </div>
+            <div class="calc__action">
+                <div class="val1">*n<input class="calc__val" type="text" id="val__xn"></div>
+            </div>
+            <div class="calc__action">
+                <div class="val1">/n<input class="calc__val" type="text" id="val__deln"></div>
+            </div>
+
+        </div>
+        <div class="calc__action">
+            <div id="calcResult-sum" class="calc__result-sum"></div>
+            <button class="button__click-res" onclick="fnValPlusN()">Рассчитать</button>
+        </div>
+        <div class="values">
+            <div class="calc__result-name">Результат 2
+                <div class="calc__val-result" id="calc__result-second"></div>
+            </div>
+        </div>
+        <div id="otp_name">123</div>
+        <ul id="short__list" class="short__list-class">
+            <li><span class="name">Фрэнсис Кафка</span></li>
+            <li><span class="name">Джордж Харрис</span></li>
+            <li><span class="name">Пипл хавает</span></li>
+            <li><span class="name">Джон Леннон</span></li>
+        </ul>
+    </div>
+    <div class="calc__body">
+        <div class="button__c" onclick="clean()">c</div>
+        <div class="calc__result-new">
+
+        </div>
+        <div class="calc__row">
+            <div class="calc__num" onclick="insert(`7`)">7</div>
+            <div class="calc__num" onclick="insert(`8`)">8</div>
+            <div class="calc__num" onclick="insert(`9`)">9</div>
+            <div class="calc__num calc__orange" onclick="insert(`+`)">+</div>
+        </div>
+        <div class="calc__row">
+            <div class="calc__num" onclick="insert(`4`)">4</div>
+            <div class="calc__num" onclick="insert(`5`)">5</div>
+            <div class="calc__num" onclick="insert(`6`)">6</div>
+            <div class="calc__num calc__orange" onclick="insert(`-`)">-</div>
+        </div>
+        <div class="calc__row">
+            <div class="calc__num" onclick="insert(`1`)">1</div>
+            <div class="calc__num" onclick="insert(`2`)">2</div>
+            <div class="calc__num" onclick="insert(`3`)">3</div>
+            <div class="calc__num calc__orange" onclick="insert(`/`)">÷</div>
+        </div>
+        <div class="calc__row">
+            <div class="calc__num" onclick="insert(`0`)">0</div>
+            <div class="calc__num" onclick="insert(`.`)">.</div>
+            <div class="calc__num" onclick="insert(`*`)">x</div>
+            <div class="calc__num calc__orange" onclick="equal()">=</div>
+        </div>
+    </div>
+    <div class="calc__body">
+        <div class="calc__row">
+            <div class="calc__num" onclick="insert(`Привет`)">Привет</div>
+            <div class="calc__num" onclick="insert(`Кек`)">Кек</div>
+            <div class="calc__num" onclick="insert(`Щек`)">Щек</div>
+            <div class="calc__num" onclick="insert(`У сюк`)">У сюк</div>
+        </div>
+        <div class="calc__row">
+            <div class="calc__num" onclick="insert(` `)"> </div>
+
+        </div>
+    </div>
+    <div class="insert__form">
+        <h2>Вывести приветствие</h2>
+        <div class="name"><input type="text" class="name_kekios" id="name_kek"></div>
+        <div class="hello__btn" onclick="insertName()">Вывести приветствие</div>
+        <!-- <div class="button_123" onclick="function insertName()">Выполнить</div> -->
+    </div>
+
+    <div class="list__wrap">
+        <h2>Добавление итемов</h2>
+        <div class="buttons__list-control">
+            <div class="btn__add-item">+</div>
+            <div id="reset__btn">-</div>
+            <div id="clean__btn">D</div>
+        </div>
+        <ul class="list__style">
+        </ul>
+    </div>
+
+</body>
+<script src="functionality.js"></script>
+<script src="creditcalc.js"></script>
+
+</html>

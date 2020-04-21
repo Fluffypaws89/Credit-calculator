@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/futura.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.credit__calc, .credit__form-wrap {
+    width: 700px;
+    background: #bceafd;
+    margin: 0 auto;
+    border: solid 6px #ffb657;
+    border-radius: 15px;
+    font-family: 'Futura';
+    font-size: 26px;
+    color: #ffb657;
+    margin-top: 30px;
+    padding: 30px 30px;
+
+}
+
+.credit__calc-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit__item {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.credit__name, .credit__value {
+    background: #fbfbfb;
+    border: solid 3px #cfd8dc;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.credit__line-wrap {
+    background: #fbfbfb;
+    width: 100%;
+    height: 50px;
+    margin-top: 0px;
+    border: solid 2px #cfd8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.credit__range {
+    background: #bceafd;
+    -webkit-appearance: none;
+    outline: none;
+    width: 100%;
+    height: 5px;
+    margin: 40px 40px;
+}
+
+
+.credit__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    background: #bceafd;
+    border: solid 2px #ffb657;
+    border-radius: 50%;
+    transition: .1s;
+
+}
+
+.credit__range::-webkit-slider-thumb:hover {
+    background: #dff6ff;
+}
+.credit__range::-webkit-slider-thumb:active {
+    background: #fff;
+}
+
+.credit__percent {
+    width: 650px;
+    margin-top: 20px;
+}
+
+.credit__item-percent {
+    color: #ffb657;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#credit__percent, #credit__value1 {
+    width: 175px;
+}
+
+#credit__send {
+    margin-right: 30px;
+    cursor: pointer;
+}
+#credit__send:hover {
+    background: #fff;
+    color: #000;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#credit__send:active {
+    
+    background: #f9dbdb;
+    color: #fff;
+}
+
